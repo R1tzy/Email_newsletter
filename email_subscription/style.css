@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','sans-serif';
+}
+
+body{
+   height: 100vh;
+   background: linear-gradient(136deg, rgb(224,195,252) 0%, rgb(142,197,252) 100%);
+}
+
+.show-btn, .wrapper{
+    background:#fff;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.show-btn{
+    color: rgb(142,197,252);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 13px 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.wrapper{
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#toggle{
+    display: none;
+}
+
+#toggle:checked ~ .wrapper{
+    opacity: 0;
+    pointer-events: none;
+    top: 40%;
+}
+
+.wrapper .cancel-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    color: rgb(142,197,252);
+}
+
+.wrapper .icon{
+    height: 110px;
+    width: 110px;
+    background: linear-gradient(136deg, rgb(224,195,252) 0%, rgb(142,197,252) 100%);
+    line-height: 110px;
+    border-radius: 50%;
+    font-size: 55px;
+    color: #fff;
+
+}
+
+.wrapper .content{
+    margin: 20px 0;
+
+}
+
+.content header{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.content p{
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: -3px;
+}
+
+form{
+    width: 98%;
+
+}
+
+form .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+form .field input{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0 15px;
+    outline: none;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+form .field input:focus{
+    border-color: rgb(142,197,252);
+}
+
+form .btn{
+    height: 47px;
+}
+
+form .btn input {
+   background: linear-gradient(136deg, rgb(224,195,252) 0%, rgb(142,197,252) 100%);
+   font-size: 19px;
+   font-weight: 500;
+   padding: 0px;
+   cursor: pointer;
+}
+
+.wrapper .text{
+    margin-top: 5px;
+}
+
+.alert {
+    margin: -9px 0 12px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.alert.error{
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.alert.success{
+    color: #155724;
+    background:#d4edda;
+    border: 1px solid #c3e6cb;
+}
